@@ -1,0 +1,38 @@
+{
+    "name": "Thesaurus",
+    "author": "Travis Weerts",
+    "description": "Turning \"UN Scientist Speak\" into everyday Joe speak.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png"
+      },
+
+      "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "UNDP Thesaurus",  // optional, shown in tooltip
+        "default_popup": "popup.html"    // optional
+      },
+
+    "permissions": ["storage"],
+    "web_accessible_resources": ["*.png"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js"],
+            "css": ["main.css"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+      ]
+
+      
+
+
+      
+
+
+
+    
+}

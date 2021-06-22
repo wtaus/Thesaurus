@@ -1,0 +1,27 @@
+.selection_bubble {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1));
+    background: #f6d5d2;
+    color: #1e1e1e;
+
+    padding: 30px;
+    -webkit-box-shadow: 3px 3px 25px 5px rgba(0,0,0,0.19); 
+    box-shadow: 3px 3px 25px 5px rgba(0,0,0,0.19);
+    border-radius: 10px;
+
+    
+  }
+
+.selection_bubble em
+{
+    color: #be9a97;
+    font-size: 0.9em;
+}
+
+.selection_bubble p
+{
+    margin-top: 20px;
+}
