@@ -1,5 +1,9 @@
 console.log("Hear my Thesaurus roar!!!");
 
+
+
+
+
 // Add bubble to the top of the page.
 var bubbleDOM = document.createElement('div');
 bubbleDOM.setAttribute('class', 'selection_bubble');
