@@ -1,146 +1,217 @@
 @font-face{ 
 	font-family: 'Proxima Nova Black';
 
-	src: url('proximanova-black-webfont.woff') format('woff'),
-         url('proximanova-black-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-black-webfont.woff') format('woff'),
+         url('./fonts/proximanova-black-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Black Italic';
 
-	src: url('proximanova-blackit-webfont.woff') format('woff'),
-         url('proximanova-blackit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-blackit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-blackit-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Bold';
 
-	src: url('proximanova-bold-webfont.woff') format('woff'),
-         url('proximanova-bold-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('./fonts/proximanova-bold-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Bold Italic';
 
-	src: url('proximanova-boldit-webfont.woff') format('woff'),
-         url('proximanova-boldit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-boldit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-boldit-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Extra Bold';
 
-	src: url('proximanova-extrabold-webfont.woff') format('woff'),
-         url('proximanova-extrabold-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-extrabold-webfont.woff') format('woff'),
+         url('./fonts/proximanova-extrabold-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Extra Bold Italic';
 
-	src: url('proximanova-extraboldit-webfont.woff') format('woff'),
-         url('proximanova-extraboldit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-extraboldit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-extraboldit-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Light';
 
-	src: url('proximanova-light-webfont.woff') format('woff'),
-         url('proximanova-light-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-light-webfont.woff') format('woff'),
+         url('./fonts/proximanova-light-webfont.woff2') format('woff2');
 }
 
 @font-face{ 
 	font-family: 'Proxima Nova Light Italic';
 
-	src: url('proximanova-lightit-webfont.woff') format('woff'),
-         url('proximanova-lightit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-lightit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-lightit-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Medium';
 
-	src: url('proximanova-medium-webfont.woff') format('woff'),
-         url('proximanova-medium-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-medium-webfont.woff') format('woff'),
+         url('./fonts/proximanova-medium-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Medium Italic';
 
-	src: url('proximanova-mediumit-webfont.woff') format('woff'),
-         url('proximanova-mediumit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-mediumit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-mediumit-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Regular';
 
-	src: url('proximanova-regular-webfont.woff') format('woff'),
-         url('proximanova-regular-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('./fonts/proximanova-regular-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Regular Italic';
 
-	src: url('proximanova-regularit-webfont.woff') format('woff'),
-         url('proximanova-regularit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-regularit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-regularit-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Semibold';
 
-	src: url('proximanova-semibold-webfont.woff') format('woff'),
-         url('proximanova-semibold-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('./fonts/proximanova-semibold-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Semibold Italic';
 
-	src: url('proximanova-semiboldit-webfont.woff') format('woff'),
-         url('proximanova-semiboldit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-semiboldit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-semiboldit-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Thin';
 
-	src: url('proximanova-thin-webfont.woff') format('woff'),
-         url('proximanova-thin-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-thin-webfont.woff') format('woff'),
+         url('./fonts/proximanova-thin-webfont.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Proxima Nova Thin Italic';
 
-	src: url('proximanova-thinit-webfont.woff') format('woff'),
-         url('proximanova-thinit-webfont.woff2') format('woff2');
+	src: url('./fonts/proximanova-thinit-webfont.woff') format('woff'),
+         url('./fonts/proximanova-thinit-webfont.woff2') format('woff2');
 }
+
+
+
+
 
 @font-face { 
 	font-family: 'Soehne Breit Dreiviertelfett Kursiv';
 
-	src: url('soehne-breit-web-dreiviertelfett-kursiv.eot') format('eot'),
-         url('soehne-breit-web-dreiviertelfett-kursiv.woff') format('woff'),
-         url('soehne-breit-web-dreiviertelfett-kursiv.woff2') format('woff2');
+	src: url('./fonts/soehne-breit-web-dreiviertelfett-kursiv.eot') format('eot'),
+         url('./fonts/soehne-breit-web-dreiviertelfett-kursiv.woff') format('woff'),
+         url('./fonts/soehne-breit-web-dreiviertelfett-kursiv.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Soehne Breit Dreiviertelfett';
 
-	src: url('soehne-breit-web-dreiviertelfett.eot') format('eot'),
-         url('soehne-breit-web-dreiviertelfett.woff') format('woff'),
-         url('soehne-breit-web-dreiviertelfett.woff2') format('woff2');
+	src: url('./fonts/soehne-breit-web-dreiviertelfett.eot') format('eot'),
+         url('./fonts/soehne-breit-web-dreiviertelfett.woff') format('woff'),
+         url('./fonts/soehne-breit-web-dreiviertelfett.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Soehne Breit Fett Kursiv';
 
-	src: url('soehne-breit-web-fett-kursiv.eot') format('eot'),
-         url('soehne-breit-web-fett-kursiv.woff') format('woff'),
-         url('soehne-breit-web-fett-kursiv.woff2') format('woff2');
+	src: url('./fonts/soehne-breit-web-fett-kursiv.eot') format('eot'),
+         url('./fonts/soehne-breit-web-fett-kursiv.woff') format('woff'),
+         url('./fonts/soehne-breit-web-fett-kursiv.woff2') format('woff2');
 }
 
 @font-face { 
 	font-family: 'Soehne Breit Fett';
 
-	src: url('soehne-breit-web-fett.eot') format('eot'),
-         url('soehne-breit-web-fett.woff') format('woff'),
-         url('soehne-breit-web-fett.woff2') format('woff2');
+	src: url('./fonts/soehne-breit-web-fett.eot') format('eot'),
+         url('./fonts/soehne-breit-web-fett.woff') format('woff'),
+         url('./fonts/soehne-breit-web-fett.woff2') format('woff2');
 }
+
+/* TEST FONT FACES */
+
+@font-face { 
+	font-family: 'Soehne Breit Buch Kursiv';
+	src: url('./fonts/test-soehne-breit-buch-kursiv.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Buch';
+	src: url('./fonts/test-soehne-breit-buch.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Extrafett Kursiv';
+	src: url('./fonts/test-soehne-breit-extrafett-kursiv.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Extrafett';
+	src: url('./fonts/test-soehne-breit-extrafett.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Extraleicht Kursiv';
+	src: url('./fonts/test-soehne-breit-extraleicht-kursiv.woff') format('woff');
+}
+
+
+@font-face { 
+	font-family: 'Soehne Breit Extraleicht';
+	src: url('./fonts/test-soehne-breit-extraleicht.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Halbfett Kursiv';
+	src: url('./fonts/test-soehne-breit-halbfett-kursiv.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Halbfett';
+	src: url('./fonts/test-soehne-breit-halbfett.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Kraftig Kursiv';
+	src: url('./fonts/test-soehne-breit-kraftig-kursiv.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Kraftig';
+	src: url('./fonts/test-soehne-breit-kraftig.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Leicht Kursiv';
+	src: url('./fonts/test-soehne-breit-leicht-kursiv.woff') format('woff');
+}
+
+@font-face { 
+	font-family: 'Soehne Breit Leicht';
+	src: url('./fonts/test-soehne-breit-leicht.woff') format('woff');
+}
+
+
+
+
 
 
 
@@ -149,6 +220,7 @@ body {
     color: #fff;
     padding: 40px 60px;
     font-size: 16px;
+    font-family: "Soehne Breit Buch", "Helvetica", "Arial", "sans-serif";
   }
 
   h1
