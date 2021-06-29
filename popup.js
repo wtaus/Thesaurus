@@ -1,7 +1,7 @@
-function hello() {
+function closeWindow() {
    
     window.close();
 }
   
-document.getElementById('clickme').addEventListener('click', hello);
-document.getElementById('x').addEventListener('click', hello);
+document.getElementById('clickme').addEventListener('click', closeWindow);
+document.getElementById('x').addEventListener('click', closeWindow);
