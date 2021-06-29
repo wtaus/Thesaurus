@@ -87,6 +87,10 @@ function doSearch(text, backgroundColor) {
 }
 
 
+// START OF HACK - 
+// The only way I could figure out how to add custom code to the <span>'s created by the HiliteColor command above was to 
+// assign a random color to the background of the <span>'s and then go back and search for those spans and add custom classes to them
+
 words.forEach(word => {
   doSearch(word, "rgba(1,1,1,0)");
 });
@@ -98,18 +102,9 @@ let spans = document.querySelectorAll('body span');
 console.log("found spans: " + spans.length);
 // Convert spans nodeslist to array
 spans = Array.from( spans ); 
-
-spans.forEach( span => {
-  let bgColor = String( document.defaultView.getComputedStyle( span, null ).backgroundColor );
-  console.log("bgColor: " + bgColor);
-});
-
-
 // Filter spans array
 // Get CSS properties object of selected element - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
 let arr = spans.filter( span => String( document.defaultView.getComputedStyle( span, null ).backgroundColor ) == 'rgba(1, 1, 1, 0)' );
-
-console.log("found spans with color: " + arr.length);
 
 // Change background color of matched span elements
 arr.forEach( span => {
@@ -119,6 +114,8 @@ arr.forEach( span => {
   } else {
     span.style.removeAttribute('background-color');
   }
-
     span.classList.add("undp_term");
 });
+//
+// END OF HACK 
+//
