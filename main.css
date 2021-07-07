@@ -2,6 +2,7 @@
 
 .selection_bubble {
     visibility: hidden;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -10,15 +11,22 @@
     padding: 40px 60px;
     font-size: 16px;
     font-family: "Soehne Breit Buch", "Helvetica", "Arial", "sans-serif";
+    width: 350px;
 
 
     -webkit-box-shadow: 3px 3px 25px 5px rgba(0,0,0,0.19); 
     box-shadow: 3px 3px 25px 5px rgba(0,0,0,0.19);
     border-radius: 10px;
     z-index:999999999999999999999999;
+    transition: opacity 0.5s;
     
   }
 
+  .selection_bubble.active
+  {
+      opacity: 1;
+      visibility: visible;
+  }
 
 .selection_bubble h3
 {
@@ -41,6 +49,7 @@
     height: 18px;
     cursor: pointer;
     transition: opacity 0.3s;
+    z-index:  9999;
   }
 
   .selection_bubble #x:hover
@@ -48,7 +57,7 @@
     opacity: 0.2;
   }
 
- .undp_term
+ .__undp_term
  {
 
      font-weight: bold;
@@ -57,7 +66,7 @@
      padding: 3px 10px ;
      
      background: #FFEB00;
-    color: #232E3E;
+     color: #232E3E;
 
      cursor: pointer;
      border-radius: 20px;
@@ -65,7 +74,7 @@
  }
 
 
- .undp_term:hover
+ .__undp_term:hover, .__undp_term.active
  {
     background: #232E3E;
     color: #FFEB00;
@@ -73,3 +82,77 @@
     
 
  }
+
+
+.selection_bubble .__undp_nibble
+{
+    height: 64px;
+    width: 72px;
+    transform: scaleX(0.6);
+    position:  absolute;
+    
+}
+.selection_bubble .__undp_nibble span
+{
+    background: #232E3E;
+    height: 56px;
+    width: 56px;
+    border-radius: 9px;
+    transform: rotate(45deg);
+    display: block;
+}
+
+.selection_bubble.__undp_topleft .__undp_nibble
+{
+    top:  auto;
+    bottom:  -27px;
+    left:  auto;
+    right:  0;
+}
+
+.selection_bubble.__undp_topleft .__undp_nibble span
+{
+    
+}
+
+.selection_bubble.__undp_topright .__undp_nibble
+{
+    top:  auto;
+    bottom:  -27px;
+    left:  0;
+    right:  auto;
+
+}
+
+.selection_bubble.__undp_topright .__undp_nibble span
+{
+    
+}
+
+.selection_bubble.__undp_bottomleft .__undp_nibble
+{
+    top:  -20px;
+    bottom:  auto;
+    left:  auto;
+    right:  0;
+}
+
+.selection_bubble.__undp_bottomleft .__undp_nibble span
+{
+    
+}
+
+.selection_bubble.__undp_bottomright .__undp_nibble
+{
+    top:  -20px;
+    bottom:  auto;
+    left:  0;
+    right:  auto;
+}
+
+.selection_bubble.__undp_bottomright .__undp_nibble span
+{
+    
+}
+
+
