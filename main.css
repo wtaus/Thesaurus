@@ -1,5 +1,17 @@
 @import "fonts.css";
 
+@font-face { 
+    font-family: 'Soehne Breit Buch';
+    src: url('chrome-extension://__MSG_@@extension_id__/fonts/test-soehne-breit-buch.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Soehne Breit Dreiviertelfett';
+    src: url('chrome-extension://__MSG_@@extension_id__/fonts/soehne-breit-web-dreiviertelfett.woff') format('woff');
+}
+
+
+
 .selection_bubble {
     visibility: hidden;
     opacity: 0;

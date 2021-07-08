@@ -18,7 +18,7 @@
       },
 
     "permissions": ["storage"],
-    "web_accessible_resources": ["*.png"],
+    "web_accessible_resources": ["*.png", "*.woff"],
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
