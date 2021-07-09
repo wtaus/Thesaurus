@@ -2,12 +2,8 @@ const definitions = {"1.5 degrees":{"term":"1.5 Degrees","definition":"The prese
 const words = ["1.5 degrees","2 degrees","adaptation","aerosol","afforestation","anthropocene","atmosphere","average temprature","biocar","biodiversity","bioenergy","biofuels","biosphere","black carbon aerosol","carbon cycle","carbon dioxide","carbon footprint","carbon neutrality","carbon offsetting","carbon pricing","climate change","climate negotiations","climate promise","co2","cop - conference of the parties","decarbonization","deforestation","desertification","developed countries","developing countries","disaster","disaster risk management","displacement","drought","dryland farming","early warning systems","earth","ecosystem","el ni\u00f1o - southern oscillation (enso)","emission pathways","emissions","emissions trading","energy efficiency","environment","equality","equity","extinction","extremen weather event","fairness","feedback loop","food security","food systems","fossil fuels","gdp","glaciers","global warming","green economy","green energy","green recovery","green transition","greenhouse effect","greenhouse gases","habitat","heatwave","indigenous knowledge","industrial revolution","industrialized countries","inequality","infrared","ipcc - intergovernmental panel on climate change","kyoto protocol","land surface air temperature","land use","land use change","least developed countries (ldcs)","methane","migration","millenium development goals","mitigation","natural gas","nature","ndc","negative emissions","net zero","ocean acidification","oceans","ozone layer","paris agreement","planet","plastics","polar","poverty","poverty eradication","pre-industrial","precipitation","purchasing power parity","radiation","recycling","reforestation","renewable energy","renewable energy","resilience","salinity","sea level rises","sea surface temperature","sequestration","small island developing states (sids)","social cost of carbon","soil carbon sequestration (scs)","stratosphere","stratosphere","sustainability","sustainable development goals","technology transfer","tipping point","transportation","tropical cyclone","unep","unfccc","united nations framework convention on climate change (unfccc)","vulnerability","well being","wildlife conservation"];
 const spanClass = "__undp_term";
 let activeSpan = undefined;
+
 const bubbleDOM = document.createElement('div');
-
-
-
-
-
 bubbleDOM.setAttribute('class', 'selection_bubble');
 document.body.appendChild(bubbleDOM);
 
@@ -62,7 +58,6 @@ function positionBubble(bubble, event)
   let nibHeight = 30;
   let nibWidth = 30;
   let offsetX = 10;
-  let offsetY = 0;
   let position = getBestPosition(bubbleRect, bounds, {x:x, y:y});
   let middlePoint = {x: bounds.x + (bounds.width/2), y: bounds.y + (bounds.height/2)};
 
@@ -115,35 +110,24 @@ function positionBubble(bubble, event)
 }
 
 
-// Move that bubble to the appropriate location.
+// Move the bubble to the appropriate location.
 function renderBubble(event, selection) {
 
   if(bubbleDOM.classList.contains("active"))
   {
     bubbleDOM.classList.remove('active');
-    setTimeout(function ()
-    {
-      renderBubble(event, selection);
-    }, 300);
+    setTimeout(() => renderBubble(event, selection), 300);
     return;
   }
   
 
   let term = whichTermIsIn(selection);
   let termCapped = term.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
-
-  if(typeof(definitions[term.toLowerCase()]) != "undefined")
-  {
-    deffy = definitions[term.toLowerCase()];
-  }
-  else
-  {
-    deffy = {definition: "NOT FOUND", term: "Uh oh"};
-  }
+  let deffy = typeof(definitions[term.toLowerCase()]) != "undefined" ? definitions[term.toLowerCase()] : {definition: "NOT FOUND", term: "Uh oh"};
   
   var _html = '<div id="x"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 1L1 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
-  _html = _html + "<h3><span class='bracket'>[</span> " + termCapped + " <span class='bracket'>]</span></h3><p>" + deffy.definition + "</p>";
-  _html = _html + '<div class="__undp_nibble"><span></span></div>';
+  _html += `<h3><span class='bracket'>[</span> ${termCapped} <span class='bracket'>]</span></h3><p> ${deffy.definition} </p>`;
+  _html += '<div class="__undp_nibble"><span></span></div>';
   bubbleDOM.innerHTML = _html;
   bubbleDOM.classList.add('active');
   positionBubble(bubbleDOM, event);
@@ -153,7 +137,6 @@ function isWordADefinition(selection)
 {
   let low = selection.toLowerCase();
   if(words.includes(low)) return true;
-  let lows = low.split(" ");
   return words.some(r=> low.indexOf(r) >= 0);
 }
 
@@ -161,34 +144,6 @@ function whichTermIsIn(selection)
 {
   return words.find(term => selection.toLowerCase().indexOf(term) >= 0);
 }
-
-
-document.addEventListener('click', function (event) {
-
-	if (!event.target.matches('.' + spanClass)) return;
-  if(activeSpan != undefined)
-  {
-    activeSpan.classList.remove("active");
-  }
-  event.target.classList.add('active');
-  activeSpan = event.target;
-  window.removeEventListener('scroll', closeActiveBubble);
-  window.removeEventListener('resize', closeActiveBubble);
-
-  window.addEventListener('scroll', closeActiveBubble);
-  window.addEventListener('resize', closeActiveBubble);
-
-  renderBubble(event, event.target.innerHTML);
-}, false);
-
-
-
-// Close the bubble when we click on the screen.
-document.addEventListener('mousedown', function (event) {
-  if (event.target.matches('.' + spanClass) || event.target.matches('.selection_bubble')) return; 
-  closeActiveBubble();
-}, false);
-
 
 function closeActiveBubble() {
   window.removeEventListener('scroll', closeActiveBubble);
@@ -199,10 +154,29 @@ function closeActiveBubble() {
 }
 
 
+document.addEventListener('click', function (event) 
+{
+	if (!event.target.matches('.' + spanClass)) return;
+  if(activeSpan != undefined)
+  {
+    activeSpan.classList.remove("active");
+  }
+  event.target.classList.add('active');
+  activeSpan = event.target;
 
+  window.removeEventListener('scroll', closeActiveBubble);
+  window.removeEventListener('resize', closeActiveBubble);
+  window.addEventListener('scroll', closeActiveBubble);
+  window.addEventListener('resize', closeActiveBubble);
 
+  renderBubble(event, event.target.innerHTML);
+}, false);
 
-
+// Close the bubble when we click on the screen.
+document.addEventListener('mousedown', function (event) {
+  if (event.target.matches('.' + spanClass) || event.target.matches('.selection_bubble')) return; 
+  closeActiveBubble();
+}, false);
 
 
 
@@ -217,7 +191,6 @@ function doSearch(text, backgroundColor) {
     document.designMode = "on";
     var sel = window.getSelection();
     sel.collapse(document.body, 0);
-
     while (window.find(text)) {
       document.execCommand("HiliteColor", false, backgroundColor);
       sel.collapseToEnd();
@@ -227,14 +200,9 @@ function doSearch(text, backgroundColor) {
 }
 
 
-words.forEach(word => {
-  doSearch(word, "rgba(1,1,1,0)");
-});
-
+words.forEach(word => { doSearch(word, "rgba(1,1,1,0)"); });
 // Get all spans
-let spans = document.querySelectorAll('body span'); 
-// Convert spans nodeslist to array
-spans = Array.from( spans ); 
+let spans = Array.from( document.querySelectorAll('body span')); 
 // Filter spans array
 let arr = spans.filter( span => String( document.defaultView.getComputedStyle( span, null ).backgroundColor ) == 'rgba(1, 1, 1, 0)' );
 
