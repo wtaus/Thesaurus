@@ -1,7 +1,7 @@
 {
-    "name": "Thesaurus",
-    "author": "Wunderman Thompson - Travis Weerts",
-    "description": "Turning \"UN Scientist Speak\" into everyday Joe speak.",
+    "name": "The Thesaurus",
+    "author": "Wunderman Thompson",
+    "description": "A well-spoken dinosaur that puts complicated climate change terms into easy-to-understand language.",
     "version": "1.0",
     "manifest_version": 2,
     "icons": {
