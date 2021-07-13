@@ -2,8 +2,8 @@
  A well-spoken dinosaur that puts complicated climate change terms into easy-to-understand language.
 
 
-# How to Install The Thesaurus Extension
-1. Download this repo
+### How to Install The Thesaurus Extension
+1. Download this repo [Download here](https://github.com/wundermanthompsonperth/Thesaurus/archive/refs/heads/main.zip)
 2. Unzip the download
 3. Open Chrome
 4. In Chrome, goto [chrome://extensions/](chrome://extensions/)
