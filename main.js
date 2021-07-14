@@ -4,7 +4,7 @@ const spanClass = "__undp_term";
 let activeSpan = undefined;
 
 const bubbleDOM = document.createElement('div');
-bubbleDOM.setAttribute('class', 'selection_bubble');
+bubbleDOM.setAttribute('class', '__undp_selection_bubble');
 document.body.appendChild(bubbleDOM);
 
 
@@ -125,8 +125,8 @@ function renderBubble(event, selection) {
   let termCapped = term.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
   let deffy = typeof(definitions[term.toLowerCase()]) != "undefined" ? definitions[term.toLowerCase()] : {definition: "NOT FOUND", term: "Uh oh"};
   
-  var _html = '<div id="x"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 1L1 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
-  _html += `<h3><span class='bracket'>[</span> ${termCapped} <span class='bracket'>]</span></h3><p> ${deffy.definition} </p>`;
+  var _html = '<div id="__undp_x"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 1L1 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
+  _html += `<h3 class="__undp_term_title"><span class='bracket'>[</span> ${termCapped} <span class='bracket'>]</span></h3><p id='__undp_definition'> ${deffy.definition} </p>`;
   _html += '<div class="__undp_nibble"><span></span></div>';
   bubbleDOM.innerHTML = _html;
   bubbleDOM.classList.add('active');
@@ -170,11 +170,12 @@ document.addEventListener('click', function (event)
   window.addEventListener('resize', closeActiveBubble);
 
   renderBubble(event, event.target.innerHTML);
+  renderBubble(event, event.target.innerHTML);
 }, false);
 
 // Close the bubble when we click on the screen.
 document.addEventListener('mousedown', function (event) {
-  if (event.target.matches('.' + spanClass) || event.target.matches('.selection_bubble')) return; 
+  if (event.target.matches('.' + spanClass) || event.target.matches('.__undp_selection_bubble')) return; 
   closeActiveBubble();
 }, false);
 
