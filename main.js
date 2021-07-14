@@ -123,8 +123,11 @@ function renderBubble(event, selection) {
 
   let term = whichTermIsIn(selection);
   let termCapped = term.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
-  let deffy = typeof(definitions[term.toLowerCase()]) != "undefined" ? definitions[term.toLowerCase()] : {definition: "NOT FOUND", term: "Uh oh"};
-  
+  let deffy = typeof(definitions[term.toLowerCase()]) != "undefined" ? definitions[term.toLowerCase()] : {definition: "", term: "Uh oh"};
+  if(deffy.definition.length < 5 || !deffy.definition)
+  {
+    deffy.definition = "This definition wasn't found. Report it.";
+  }
   var _html = '<div id="__undp_x"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 1L1 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
   _html += `<h3 class="__undp_term_title"><span class='bracket'>[</span> ${termCapped} <span class='bracket'>]</span></h3><p id='__undp_definition'> ${deffy.definition} </p>`;
   _html += '<div class="__undp_nibble"><span></span></div>';
@@ -170,6 +173,7 @@ document.addEventListener('click', function (event)
   window.addEventListener('resize', closeActiveBubble);
 
   renderBubble(event, event.target.innerHTML);
+  // still a hack solution, but found that running this twice helped reposition it better
   renderBubble(event, event.target.innerHTML);
 }, false);
 
