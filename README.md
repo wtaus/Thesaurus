@@ -4,13 +4,7 @@
  A well-spoken dinosaur that puts complicated climate change terms into easy-to-understand language.
 
 
-## How to Install The Thesaurus Extension
-
-[![How to install video](https://cdn.loom.com/sessions/thumbnails/7c2065de70a24fffbbb69de29d4f48d9-00001.gif)](https://www.loom.com/share/7c2065de70a24fffbbb69de29d4f48d9)
-
-[Watch the video here](https://www.loom.com/share/7c2065de70a24fffbbb69de29d4f48d9)
-
-### Installation Instructions
+### How to Install The Thesaurus Extension
 
 1. [Download](https://github.com/wundermanthompsonperth/Thesaurus/archive/refs/heads/main.zip) the extension
 2. Unzip the download
