@@ -8,7 +8,7 @@
 
 ### How to video
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/7c2065de70a24fffbbb69de29d4f48d9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![How to install video](https://cdn.loom.com/sessions/thumbnails/7c2065de70a24fffbbb69de29d4f48d9-00001.gif)]
 
 ### Installation Instructions
 
