@@ -223,6 +223,8 @@ arr.forEach( span => {
     span.classList.add(spanClass);
 
 });
+
+window.scrollTo(0, 0);
 //
 // END OF HACK 
 //
