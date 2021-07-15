@@ -43,9 +43,10 @@ function getWindowRect()
 
 function getBestPosition(bubbleRect, point, mouse)
 {
+
   let windowRect = getWindowRect();
-  let h = point.x > windowRect.width - point.x ? "left" : "right";
-  let v = point.y > windowRect.height - point.y ? "top" : "bottom";
+  let h = (point.x - window.scrollX) > windowRect.width - (point.x - window.scrollX) ? "left" : "right";
+  let v = (point.y - window.scrollY) > windowRect.height - (point.y - window.scrollY)  ? "top" : "bottom";
   return v + h;
 }
 

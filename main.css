@@ -44,6 +44,7 @@
 
 .__undp_selection_bubble h3.__undp_term_title
 {
+    position: relative;
     color: #FFEB00;
     font-size: 19px;
     font-family: 'Soehne Breit Dreiviertelfett', "Helvetica", "Arial", "sans-serif";
