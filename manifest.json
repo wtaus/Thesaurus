@@ -17,7 +17,7 @@
         "default_popup": "popup.html"
       },
 
-    "permissions": [],
+    "permissions": ["activeTab"],
     "web_accessible_resources": ["*.png", "*.woff"],
     "background": {
       "persistent": false,
