@@ -19,6 +19,10 @@
 
     "permissions": [],
     "web_accessible_resources": ["*.png", "*.woff"],
+    "background": {
+      "persistent": false,
+      "scripts": ["background.js"]
+    },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],

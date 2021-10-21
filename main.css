@@ -24,7 +24,7 @@
     font-size: 14px;
     font-family: "Soehne Breit Buch", "Helvetica", "Arial", "sans-serif";
     width: auto;
-    max-width: 50%;
+    max-width: 500px;
     min-width: 350px;
 
 
@@ -49,6 +49,7 @@
     font-size: 19px;
     font-family: 'Soehne Breit Dreiviertelfett', "Helvetica", "Arial", "sans-serif";
     z-index: 8888;
+    margin-top: 0;
 }
 
 .__undp_selection_bubble p, 
@@ -56,10 +57,11 @@
 {
     margin-top: 20px;
     color: rgb(255, 255, 255) !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     z-index: 8888;
     display: block;
     position: relative;
+    margin-bottom: 10px;
 }
 
 

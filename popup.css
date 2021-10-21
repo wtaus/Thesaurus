@@ -6,18 +6,15 @@
          url('./fonts/soehne-breit-web-dreiviertelfett.woff2') format('woff2');
 }
 
-
-/* TEST FONT FACES */
-
 @font-face { 
   font-family: 'Soehne Breit Buch';
-  src: url('./fonts/test-soehne-breit-buch.woff') format('woff');
+  src: url('./fonts/soehne-breit-buch.woff') format('woff');
 }
 
 
 
 body {
-    background: #232E3E;
+    background: #171617;
     color: #fff;
     padding: 40px 60px;
     font-size: 16px;
