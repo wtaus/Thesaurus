@@ -23,8 +23,13 @@ body {
 
   h1
   {
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Soehne Breit Dreiviertelfett';
+  }
+
+  h1 span
+  {
+    font-size: 21px;
   }
 
   p {
@@ -73,4 +78,16 @@ body {
   {
     color: #FFEB00;
     border: 2px solid #FFEB00;
+  }
+
+  #preloader
+  {
+    color: #6FE29C;
+    line-height: 50px;
+    display: flex;
+  }
+
+  #preloader img
+  {
+    margin-right: 10px;
   }

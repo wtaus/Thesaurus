@@ -1,7 +1,7 @@
 {
-    "name": "The Thesaurus",
+    "name": "Thesaurus Rex",
     "author": "Wunderman Thompson",
-    "description": "A well-spoken dinosaur that puts complicated climate change terms into easy-to-understand language.",
+    "description": "A well-spoken dinosaur (and expert on extinction) that puts complicated climate change terms into easy-to-understand language.",
     "version": "1.0",
     "manifest_version": 2,
     "icons": {
@@ -13,12 +13,12 @@
 
       "browser_action": {
         "default_icon": "icon.png",
-        "default_title": "UNDP Thesaurus", 
+        "default_title": "Thesaurus Rex", 
         "default_popup": "popup.html"
       },
 
-    "permissions": ["activeTab"],
-    "web_accessible_resources": ["*.png", "*.woff"],
+    "permissions": [],
+    "web_accessible_resources": ["*.png", "*.woff", "*.gif"],
     "background": {
       "persistent": false,
       "scripts": ["background.js"]
