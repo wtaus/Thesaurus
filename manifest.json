@@ -1,8 +1,8 @@
 {
     "name": "Thesaurus Rex",
     "author": "Wunderman Thompson",
-    "description": "A well-spoken dinosaur (and expert on extinction) that puts complicated climate change terms into easy-to-understand language.",
-    "version": "1.0",
+    "description": "A well-spoken dinosaur that uncomplicates the science of extinction and climate change.",
+    "version": "1.01",
     "manifest_version": 2,
     "icons": {
         "16": "icon16.png",
